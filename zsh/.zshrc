@@ -32,6 +32,11 @@ bindkey -M vicmd v edit-command-line
 
 source ~/.dotfiles/zsh/external/bd.zsh
 
+if [ $(command -v "fzf") ]; then
+	source /usr/share/fzf/completion.zsh
+	source /usr/share/fzf/key-bindings.zsh
+fi
+
 source $DOTFILES/zsh/scripts.sh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
