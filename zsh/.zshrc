@@ -31,5 +31,5 @@ zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
 
-eval "$(starship init zsh)"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(starship init zsh)"
