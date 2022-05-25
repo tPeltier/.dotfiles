@@ -11,7 +11,7 @@ autoload -Uz compinit; compinit
 
 # autocomplete hidden files
 _comp_options+=(globdots) 
-source ~/dotfiles/zsh/external/completion.zsh
+source ~/.dotfiles/zsh/external/completion.zsh
 
 # Push the current directory visited on to the stack.
 setopt AUTO_PUSHD
