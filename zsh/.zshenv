@@ -17,5 +17,5 @@ export HISTSIZE=10000
 # Maximum events in history file
 export SAVEHIST=10000
 
-export DOTFILES="$HOME/dotfiles"
+export DOTFILES="$HOME/.dotfiles"
 
