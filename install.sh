@@ -15,6 +15,7 @@ ln -sf "$HOME/.dotfiles/nvim/" "$HOME/.config"
 ########
 
 mkdir -p "$HOME/.config/fish"
+rm -rf "$HOME/.config/fish"
 ln -sf "$HOME/.dotfiles/fish/" "$HOME/.config"
 
 
