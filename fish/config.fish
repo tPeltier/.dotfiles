@@ -17,7 +17,8 @@ alias la='exa --all'
 # alias la='ls -A'
 alias l='exa --git-ignore'
 # alias l='ls -CF'
-alias lt='exa --long --tree --level=3'
+alias llt='exa --long --tree --level=3'
+alias lt='exa --tree --level=3'
 
 # cd aliases
 # alias cd=
