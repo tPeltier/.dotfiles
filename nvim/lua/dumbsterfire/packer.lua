@@ -15,8 +15,8 @@ return require('packer').startup(function(use)
 
   -- Colors
   -- use 'tanvirtin/monokai.nvim'
-  -- use { "catppuccin/nvim", as = "catppuccin" }
   use 'nyoom-engineering/oxocarbon.nvim'
+  -- use 'sainnhe/sonokai'
 
   -- Undo tree
   use 'mbbill/undotree'
