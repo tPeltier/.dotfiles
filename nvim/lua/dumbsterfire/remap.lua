@@ -6,7 +6,7 @@ local xnoremap = Remap.xnoremap
 local nmap = Remap.nmap
 local builtin = require("telescope.builtin")
 
-nnoremap("<leader>e", ":Ex<CR>", { desc = "Open netrw" })
+nnoremap("<leader>ex", ":Ex<CR>", { desc = "Open netrw" })
 nnoremap("<leader>u", ":UndotreeShow<Cr>", { desc = "Show Undotree" })
 nnoremap("<leader>s", "z=", { desc = "Spell Check" })
 nnoremap("<leader>b", ":FSToggle<Cr>", { desc = "Toggle Bionic Reading" })
