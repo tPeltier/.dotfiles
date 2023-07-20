@@ -1,3 +1,4 @@
+require("dumbsterfire.packer")
 require("dumbsterfire.set")
 require("dumbsterfire.remap")
 -- lsp setup
