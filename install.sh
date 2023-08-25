@@ -18,6 +18,12 @@ mkdir -p "$HOME/.config/fish"
 rm -rf "$HOME/.config/fish"
 ln -sf "$HOME/.dotfiles/fish/" "$HOME/.config"
 
+########
+# bash #
+########
+
+rm -rf "$HOME/.bashrc"
+ln -sf "$HOME/.dotfiles/bash/.bashrc" "$HOME/.bashrc"
 
 #########
 # Fonts #
