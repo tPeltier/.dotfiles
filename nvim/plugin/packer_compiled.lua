@@ -135,7 +135,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["nvim-autopairs"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    config = { "\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\vmap_cr\1\nsetup\19nvim-autopairs\frequire\0" },
     loaded = true,
     path = "/home/justice/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
@@ -144,6 +144,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/justice/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/justice/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -202,7 +207,7 @@ _G.packer_plugins = {
     url = "https://github.com/christoomey/vim-tmux-navigator"
   },
   ["which-key.nvim"] = {
-    config = { "\27LJ\2\n�\6\0\0\6\0*\00016\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0005\3\b\0005\4\3\0005\5\4\0=\5\5\0045\5\6\0=\5\a\4=\4\t\0035\4\n\0=\4\v\0034\4\0\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0005\5\18\0=\5\19\0045\5\20\0=\5\21\4=\4\22\0035\4\24\0005\5\23\0=\5\25\0045\5\26\0=\5\27\4=\4\28\0035\4\29\0=\4\30\0035\4 \0005\5\31\0=\5!\0045\5\"\0=\5#\4=\4$\0035\4%\0004\5\0\0=\5&\0045\5'\0=\5(\4=\4)\3>\3\1\2B\0\2\1K\0\1\0\fdisable\14filetypes\1\2\0\0\20TelescopePrompt\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\tcall\blua\a^:\a^ \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\nalign\tleft\fspacing\3\3\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\2\3\2\3\2\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\3\rposition\vbottom\vborder\tnone\rwinblend\3\0\19popup_mappings\1\0\2\14scroll_up\n<c-u>\16scroll_down\n<c-d>\nicons\1\0\3\ngroup\6+\15breadcrumb\a»\14separator\b➜\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\4\14show_help\2\14show_keys\2\rtriggers\tauto\19ignore_missing\1\fpresets\1\0\a\6g\2\6z\2\bnav\2\fwindows\2\17text_objects\2\fmotions\2\14operators\2\rspelling\1\0\2\fenabled\1\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\0" },
+    config = { "\27LJ\2\n�\6\0\0\6\0*\00016\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0005\3\b\0005\4\3\0005\5\4\0=\5\5\0045\5\6\0=\5\a\4=\4\t\0035\4\n\0=\4\v\0034\4\0\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0005\5\18\0=\5\19\0045\5\20\0=\5\21\4=\4\22\0035\4\24\0005\5\23\0=\5\25\0045\5\26\0=\5\27\4=\4\28\0035\4\29\0=\4\30\0035\4 \0005\5\31\0=\5!\0045\5\"\0=\5#\4=\4$\0035\4%\0004\5\0\0=\5&\0045\5'\0=\5(\4=\4)\3>\3\1\2B\0\2\1K\0\1\0\fdisable\14filetypes\1\2\0\0\20TelescopePrompt\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\tcall\blua\a^:\a^ \vlayout\nwidth\1\0\2\bmax\0032\bmin\3\20\vheight\1\0\2\nalign\tleft\fspacing\3\3\1\0\2\bmax\3\25\bmin\3\4\vwindow\fpadding\1\5\0\0\3\2\3\2\3\2\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\3\vborder\tnone\rwinblend\3\0\rposition\vbottom\19popup_mappings\1\0\2\16scroll_down\n<c-d>\14scroll_up\n<c-u>\nicons\1\0\3\14separator\b➜\ngroup\6+\15breadcrumb\a»\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\4\19ignore_missing\1\rtriggers\tauto\14show_keys\2\14show_help\2\fpresets\1\0\a\fmotions\2\14operators\2\6g\2\6z\2\bnav\2\fwindows\2\17text_objects\2\rspelling\1\0\2\fenabled\1\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\0" },
     loaded = true,
     path = "/home/justice/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
@@ -210,14 +215,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n�\6\0\0\6\0*\00016\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0005\3\b\0005\4\3\0005\5\4\0=\5\5\0045\5\6\0=\5\a\4=\4\t\0035\4\n\0=\4\v\0034\4\0\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0005\5\18\0=\5\19\0045\5\20\0=\5\21\4=\4\22\0035\4\24\0005\5\23\0=\5\25\0045\5\26\0=\5\27\4=\4\28\0035\4\29\0=\4\30\0035\4 \0005\5\31\0=\5!\0045\5\"\0=\5#\4=\4$\0035\4%\0004\5\0\0=\5&\0045\5'\0=\5(\4=\4)\3>\3\1\2B\0\2\1K\0\1\0\fdisable\14filetypes\1\2\0\0\20TelescopePrompt\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\tcall\blua\a^:\a^ \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\nalign\tleft\fspacing\3\3\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\2\3\2\3\2\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\3\rposition\vbottom\vborder\tnone\rwinblend\3\0\19popup_mappings\1\0\2\14scroll_up\n<c-u>\16scroll_down\n<c-d>\nicons\1\0\3\ngroup\6+\15breadcrumb\a»\14separator\b➜\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\4\14show_help\2\14show_keys\2\rtriggers\tauto\19ignore_missing\1\fpresets\1\0\a\6g\2\6z\2\bnav\2\fwindows\2\17text_objects\2\fmotions\2\14operators\2\rspelling\1\0\2\fenabled\1\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+try_loadstring("\27LJ\2\n�\6\0\0\6\0*\00016\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0005\3\b\0005\4\3\0005\5\4\0=\5\5\0045\5\6\0=\5\a\4=\4\t\0035\4\n\0=\4\v\0034\4\0\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0005\5\18\0=\5\19\0045\5\20\0=\5\21\4=\4\22\0035\4\24\0005\5\23\0=\5\25\0045\5\26\0=\5\27\4=\4\28\0035\4\29\0=\4\30\0035\4 \0005\5\31\0=\5!\0045\5\"\0=\5#\4=\4$\0035\4%\0004\5\0\0=\5&\0045\5'\0=\5(\4=\4)\3>\3\1\2B\0\2\1K\0\1\0\fdisable\14filetypes\1\2\0\0\20TelescopePrompt\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\tcall\blua\a^:\a^ \vlayout\nwidth\1\0\2\bmax\0032\bmin\3\20\vheight\1\0\2\nalign\tleft\fspacing\3\3\1\0\2\bmax\3\25\bmin\3\4\vwindow\fpadding\1\5\0\0\3\2\3\2\3\2\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\3\vborder\tnone\rwinblend\3\0\rposition\vbottom\19popup_mappings\1\0\2\16scroll_down\n<c-d>\14scroll_up\n<c-u>\nicons\1\0\3\14separator\b➜\ngroup\6+\15breadcrumb\a»\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\4\19ignore_missing\1\rtriggers\tauto\14show_keys\2\14show_help\2\fpresets\1\0\a\fmotions\2\14operators\2\6g\2\6z\2\bnav\2\fwindows\2\17text_objects\2\rspelling\1\0\2\fenabled\1\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\vmap_cr\1\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
