@@ -168,6 +168,9 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- java
+    use 'mfussenegger/nvim-jdtls'
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
