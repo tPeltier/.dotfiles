@@ -196,3 +196,8 @@ fi
 
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
+
+# set PATH to include private ~/.local/bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
