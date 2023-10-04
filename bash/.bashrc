@@ -159,6 +159,9 @@ alias tmuxks='tmux kill-server'
 # update
 alias upall='sudo dnf upgrade && sudo flatpak upgrade'
 
+# buku
+alias b='buku --suggest'
+
 # make a new dir and name it, init git repo, cp .gitignore
 # source: https://linxize.com/post/how-to-create-bash-aliases/u
 # for python
