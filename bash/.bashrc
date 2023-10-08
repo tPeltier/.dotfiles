@@ -161,6 +161,9 @@ alias upall='sudo dnf upgrade && sudo flatpak upgrade'
 
 # buku
 alias b='buku --suggest'
+#alias fpb= 'firefox --private-window $(buku -p -f 40 | fzf | cut -f1)'
+alias fpbu='firefox --private-window $(buku -p -f 10 | fzf)'
+alias bgui='~/b.sh'
 
 # make a new dir and name it, init git repo, cp .gitignore
 # source: https://linxize.com/post/how-to-create-bash-aliases/u
