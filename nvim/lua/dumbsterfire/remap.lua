@@ -12,6 +12,9 @@ nnoremap("<leader>s", "z=", { desc = "Spell Check" })
 nnoremap("<leader>b", ":FSToggle<Cr>", { desc = "Toggle Bionic Reading" })
 nnoremap("<leader>q", "@q", { desc = "Call 'q' macro one time" })
 
+-- restart LSP 
+nnoremap("<leader>r", ":LspRestart<CR>", { desc = "Restart LSP"})
+
 -- telescope
 nnoremap('<leader>ff', builtin.find_files, { desc = "Find Files" })
 nnoremap('<leader>fg', builtin.live_grep, { desc = "Live Grep" })
