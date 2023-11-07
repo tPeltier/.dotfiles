@@ -98,8 +98,11 @@ esac
 
 # confirm actions
 alias rm='rm -i'
+alias rmy='rm'
 alias mv='mv -i'
+alias mvy='mv'
 alias cp='cp -i'
+alias cpy='cp'
 # open
 alias ii='xdg-open'
 
