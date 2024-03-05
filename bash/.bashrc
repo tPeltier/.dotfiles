@@ -156,6 +156,14 @@ alias gst="git stash"
 alias gstp="git stash pop"
 alias gw="git show"
 
+# docker aliases
+alias dcup="sudo docker-compose up"
+alias dcdn="sudo docker-compose down"
+alias dcps="sudo docker ps"
+alias dcsh="sudo docker exec sh"
+alias dockerstart="sudo systemctl start docker"
+alias dockerstop="sudo systemctl stop docker"
+
 # tmux aliases
 alias tmuxl='tmux list-sessions'
 alias tmuxks='tmux kill-server'
@@ -168,6 +176,9 @@ alias b='buku --suggest'
 #alias fpb= 'firefox --private-window $(buku -p -f 40 | fzf | cut -f1)'
 alias fpbu='firefox --private-window $(buku -p -f 10 | fzf)'
 alias bgui='~/b.sh'
+
+# findme.sh 
+alias findme='~/findme.sh'
 
 # make a new dir and name it, init git repo, cp .gitignore
 # source: https://linxize.com/post/how-to-create-bash-aliases/u
