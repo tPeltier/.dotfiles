@@ -118,8 +118,8 @@ alias l='eza --git-ignore'
 alias llt='eza --long --tree --level=3'
 alias lt='eza --tree --level=3'
 # FZF aliases
-alias cfzf='code $(fzf)'
-alias nfzf='nvim $(fzf)'
+#alias cfzf='code $(fzf)'
+alias nfzf='nvim +FZF'
 
 # git aliases
 alias s="git status -sb"
