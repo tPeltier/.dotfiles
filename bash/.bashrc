@@ -167,8 +167,13 @@ alias dockerstart="sudo systemctl start docker"
 alias dockerstop="sudo systemctl stop docker"
 
 # tmux aliases
-alias tmuxl='tmux list-sessions'
-alias tmuxks='tmux kill-server'
+#alias tmuxls='tmux list-sessions'
+alias tl='tmux list-sessions'
+#alias tmuxks='tmux kill-server'
+alias tks='tmux kill-server'
+alias td='tmux detach'
+alias ta='tmux attach'
+
 
 # update
 alias upall='sudo dnf upgrade && sudo flatpak upgrade'
@@ -177,10 +182,18 @@ alias upall='sudo dnf upgrade && sudo flatpak upgrade'
 alias b='buku --suggest'
 #alias fpb= 'firefox --private-window $(buku -p -f 40 | fzf | cut -f1)'
 alias fpbu='firefox --private-window $(buku -p -f 10 | fzf)'
-alias bgui='~/b.sh'
+
+
+# Script aliases
 
 # findme.sh 
-alias findme='~/findme.sh'
+alias findme='$HOME/.myscripts/findme.sh'
+# buku gui
+alias bgui='$HOME/.myscripts/b.sh'
+# ftmuxp.sh
+alias ft='$HOME/.myscripts/ftmuxp_load.sh'
+# gather_pics.sh
+alias gatherpics='$HOME/.myscripts/gather_pics.sh'
 
 # make a new dir and name it, init git repo, cp .gitignore
 # source: https://linxize.com/post/how-to-create-bash-aliases/u
@@ -196,6 +209,7 @@ mkpy ()
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
