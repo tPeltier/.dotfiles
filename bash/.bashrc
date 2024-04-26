@@ -191,7 +191,7 @@ alias findme='$HOME/.myscripts/findme.sh'
 # buku gui
 alias bgui='$HOME/.myscripts/b.sh'
 # ftmuxp.sh
-alias ft='$HOME/.myscripts/ftmuxp_load.sh'
+alias fj='$HOME/.myscripts/ftmuxp_load.sh'
 # gather_pics.sh
 alias gatherpics='$HOME/.myscripts/gather_pics.sh'
 
