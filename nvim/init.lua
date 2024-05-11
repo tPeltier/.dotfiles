@@ -161,6 +161,10 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- My keymaps
+vim.keymap.set("n", "<leader>sc", "z=", { desc = "[S]pell [C]heck" })
+vim.keymap.set("n", "<leader>a", "@q", { desc = "[A]t q; execute q macro" })
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
