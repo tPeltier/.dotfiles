@@ -200,6 +200,16 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
+-- Set markdown indent to satiate markdownlint
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	callback = function()
+		vim.opt.shiftwidth = 2
+		vim.opt.tabstop = 2
+		vim.opt.softtabstop = 2
+	end,
+})
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
@@ -581,6 +591,7 @@ require("lazy").setup({
 				-- gopls = {},
 				pyright = {},
 				marksman = {},
+				yamlls = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
