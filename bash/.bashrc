@@ -119,7 +119,7 @@ alias llt='eza --long --tree --level=3'
 alias lt='eza --tree --level=3'
 # FZF aliases
 #alias cfzf='code $(fzf)'
-alias nfzf='nvim +FZF'
+alias nfzf='nvim -c "lua require(\"telescope.builtin\").find_files()"'
 
 # git aliases
 alias s="git status -sb"
