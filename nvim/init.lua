@@ -157,6 +157,10 @@ vim.opt.scrolloff = 10
 -- Enable spellcheck
 vim.opt.spell = true
 
+-- Enable wrapping and linebreaking
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
