@@ -160,6 +160,9 @@ vim.opt.spell = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
 
+-- Set text width to 80
+vim.opt.textwidth = 80
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
