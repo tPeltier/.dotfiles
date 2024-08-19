@@ -238,3 +238,6 @@ eval "$(starship init bash)"
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+#   Autocompletion for kubectl
+source <(kubectl completion bash)
