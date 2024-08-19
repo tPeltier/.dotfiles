@@ -99,9 +99,8 @@ vim.g.have_nerd_font = true
 --  For more options, you can see `:help option-list`
 
 -- Make line numbers default
---vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
+-- Having both on gives hybrid line numbers
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
@@ -160,6 +159,9 @@ vim.opt.spell = true
 -- Enable wrapping and linebreaking
 vim.opt.wrap = true
 vim.opt.linebreak = true
+
+-- Set text width to 80
+vim.opt.textwidth = 80
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -592,7 +594,7 @@ require("lazy").setup({
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				clangd = {},
-				-- gopls = {},
+				gopls = {},
 				pyright = {},
 				marksman = {},
 				yamlls = {},
