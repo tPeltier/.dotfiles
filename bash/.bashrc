@@ -194,6 +194,8 @@ alias bgui='$HOME/.myscripts/b.sh'
 alias fj='$HOME/.myscripts/ftmuxp_load.sh'
 # gather_pics.sh
 alias gatherpics='$HOME/.myscripts/gather_pics.sh'
+# md to pdf (same name)
+alias md2pdf='$HOME/.myscripts/md2pdf.sh'
 
 # make a new dir and name it, init git repo, cp .gitignore
 # source: https://linxize.com/post/how-to-create-bash-aliases/u
