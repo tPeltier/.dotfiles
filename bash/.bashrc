@@ -176,7 +176,7 @@ alias ta='tmux attach'
 
 
 # update
-alias upall='sudo dnf upgrade && sudo flatpak upgrade'
+alias upall='sudo dnf upgrade -y && sudo flatpak upgrade -y'
 
 # buku
 alias b='buku --suggest'
