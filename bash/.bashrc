@@ -156,6 +156,8 @@ alias gst="git stash"
 alias gstp="git stash pop"
 alias gw="git show"
 
+alias lg="lazygit"
+
 # docker aliases
 alias dcup="sudo docker-compose up"
 alias dcupd="sudo docker-compose up -d"
