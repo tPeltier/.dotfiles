@@ -159,12 +159,12 @@ alias gw="git show"
 alias lg="lazygit"
 
 # docker aliases
-alias dcup="sudo docker-compose up"
-alias dcupd="sudo docker-compose up -d"
-alias dcupb="sudo docker-compose up --build"
-alias dcdn="sudo docker-compose down"
+alias dcup="sudo docker compose up"
+alias dcupd="sudo docker compose up -d"
+alias dcupb="sudo docker compose up --build"
+alias dcdn="sudo docker compose down"
 alias dcps="sudo docker ps"
-alias dcsh="sudo docker exec sh"
+# alias dcsh="sudo docker exec sh"
 alias dockerstart="sudo systemctl start docker"
 alias dockerstop="sudo systemctl stop docker"
 
