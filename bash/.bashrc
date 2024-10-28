@@ -1,4 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
+#
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -185,6 +186,11 @@ alias b='buku --suggest'
 #alias fpb= 'firefox --private-window $(buku -p -f 40 | fzf | cut -f1)'
 alias fpbu='firefox --private-window $(buku -p -f 10 | fzf)'
 
+# ollama
+alias ollamastart='docker start ollama'
+alias ollamastop='docker stop ollama'
+alias ai='docker exec -it ollama ollama run mistral-small'
+alias code='docker exec -it ollama ollama run deepseek-coder-v2'
 
 # Script aliases
 
