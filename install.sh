@@ -25,6 +25,14 @@ ln -sf "$HOME/.dotfiles/fish/" "$HOME/.config"
 rm -rf "$HOME/.bashrc"
 ln -sf "$HOME/.dotfiles/bash/.bashrc" "$HOME/.bashrc"
 
+########
+# kitty #
+########
+
+mkdir -p "$HOME/.config/kitty"
+rm -rf "$HOME/.config/kitty"
+ln -sf "$HOME/.dotfiles/kitty/" "$HOME/.config"
+
 #########
 # Fonts #
 #########
