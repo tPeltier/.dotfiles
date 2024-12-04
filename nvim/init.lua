@@ -180,6 +180,11 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>sc", "z=", { desc = "[S]pell [C]heck" })
 vim.keymap.set("n", "<leader>a", "@q", { desc = "[A]t q; execute q macro" })
 
+-- lua runners
+vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Run whole Lua file" })
+vim.keymap.set("n", "<leader>x", ":.lua <CR>", { desc = "Run Lua line" })
+vim.keymap.set("v", "<leader>x", ":lua <CR>", { desc = "Run selected Lua lines" })
+
 -- zen mode toggle
 vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>", { desc = "Toggle ZenMode" })
 
