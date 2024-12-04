@@ -8,4 +8,5 @@ return {
 	-- "monokai" colortheme
 	"sainnhe/sonokai",
 	"ThePrimeagen/harpoon",
+	"folke/zen-mode.nvim",
 }
