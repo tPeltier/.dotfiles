@@ -189,9 +189,9 @@ alias fpbu='firefox --private-window $(buku -p -f 10 | fzf)'
 # ollama
 alias ollamastart='docker start ollama'
 alias ollamastop='docker stop ollama'
-alias ai='docker exec -it ollama ollama run deepseek-r1:32b'
-alias lite='docker exec -it ollama ollama run deepseek-r1:8b'
-alias tiny='docker exec -it ollama ollama run llama3.2:3b'
+alias ai='docker exec -it ollama ollama run gemma2:27b'
+alias lite='docker exec -it ollama ollama run llama3.1'
+alias tiny='docker exec -it ollama ollama run phi4'
 
 # Script aliases
 
