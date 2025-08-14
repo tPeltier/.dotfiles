@@ -193,6 +193,9 @@ alias ai='docker exec -it ollama ollama run gemma2:27b'
 alias lite='docker exec -it ollama ollama run llama3.1'
 alias tiny='docker exec -it ollama ollama run phi4'
 
+# firefox nightly ( testing; known bad solution )
+alias devbrowser='$HOME/.local/opt/firefox-devel/firefox/firefox'
+
 # Script aliases
 
 # findme.sh 
@@ -251,6 +254,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
+# export GOPATH=$HOME/go
 #   Autocompletion for kubectl
 source <(kubectl completion bash)
