@@ -142,7 +142,7 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣", eol = "↵", space = "·" }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
@@ -151,7 +151,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 18 -- Playing with; had 10. 18 gives 'line is always centered'
 
 -- Enable spellcheck
 vim.opt.spell = true
@@ -168,15 +168,8 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
-
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
-
--- Set highlight on search, but clear on pressing <Esc> in normal mode
-vim.opt.hlsearch = true
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-
--- My keymaps
+--
+-- [[ My keymaps ]]
 vim.keymap.set("n", "<leader>sc", "z=", { desc = "[S]pell [C]heck" })
 vim.keymap.set("n", "<leader>a", "@q", { desc = "[A]t q; execute q macro" })
 
@@ -187,6 +180,13 @@ vim.keymap.set("v", "<leader>x", ":lua <CR>", { desc = "Run selected Lua lines" 
 
 -- zen mode toggle
 vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>", { desc = "Toggle ZenMode" })
+
+-- [[ Basic Keymaps ]]
+--  See `:help vim.keymap.set()`
+
+-- Set highlight on search, but clear on pressing <Esc> in normal mode
+vim.opt.hlsearch = true
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -227,6 +227,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt.shiftwidth = 2
 		vim.opt.tabstop = 2
 		vim.opt.softtabstop = 2
+		vim.opt.expandtab = true -- added to see if this fixes it not quite working sometimes?
 	end,
 })
 
@@ -343,7 +344,7 @@ require("lazy").setup({
 	{ -- Fuzzy Finder (files, lsp, etc)
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
-		branch = "0.1.x",
+		-- branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{ -- If encountering errors, see telescope-fzf-native README for installation instructions
@@ -391,9 +392,9 @@ require("lazy").setup({
 				--  All the info you're looking for is in `:help telescope.setup()`
 				--
 				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
+				-- 	mappings = {
+				-- 		i = { ["<c-enter>"] = "to_fuzzy_refine" },
+				-- 	},
 				-- },
 				-- pickers = {}
 				extensions = {
@@ -698,6 +699,7 @@ require("lazy").setup({
 				}
 			end,
 			formatters_by_ft = {
+				-- TODO: ADD FORMATTERS
 				lua = { "stylua" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
@@ -887,7 +889,7 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		opts = {
-			ensure_installed = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "vim", "vimdoc", "go" },
+			ensure_installed = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
 			-- Autoinstall languages that are not installed
 			auto_install = true,
 			highlight = {

@@ -180,6 +180,7 @@ alias ta='tmux attach'
 
 # update
 alias upall='sudo dnf upgrade -y && sudo flatpak upgrade -y'
+alias upnvim='nvim -c "Lazy update" && nvim -c "MasonUpdate"'
 
 # buku
 alias b='buku --suggest'
