@@ -10,7 +10,7 @@ case $- in
 esac
 
 # Set Editor to Neovim
-EDITOR=nvim
+export EDITOR=nvim
 # Set VI Mode 
 set -o vi
 bind -m vi-command 'Control-g: clear-screen'
@@ -208,6 +208,8 @@ alias fj='$HOME/.myscripts/ftmuxp_load.sh'
 alias gatherpics='$HOME/.myscripts/gather_pics.sh'
 # md to pdf (same name)
 alias md2pdf='$HOME/.myscripts/md2pdf.sh'
+# Superman (vim-superman) man pages
+alias vman='$HOME/.myscripts/vman.sh'
 
 # make a new dir and name it, init git repo, cp .gitignore
 # source: https://linxize.com/post/how-to-create-bash-aliases/u

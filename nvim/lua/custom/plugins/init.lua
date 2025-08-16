@@ -9,4 +9,5 @@ return {
 	"sainnhe/sonokai",
 	"ThePrimeagen/harpoon",
 	"folke/zen-mode.nvim",
+	"jez/vim-superman",
 }
