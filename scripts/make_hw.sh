@@ -83,4 +83,4 @@ git commit -am "init commit"
 
 
 echo ""
-echo "$hwfile created in $hwdir/$"
+echo "$hwfile created in $hwdir/$hwname"
