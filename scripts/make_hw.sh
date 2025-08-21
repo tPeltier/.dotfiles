@@ -4,7 +4,7 @@
 hwrootdir="$HOME/school/utc/grad/s8_2025_fall/"
 semester="fall25"
 
-isWardclass="vuln"
+isWardclass="vuln" # NOTE: change to match some substring in the class name
 
 cd $hwrootdir
 current=($(fd -t d -d 1)) # get current class dirs
@@ -43,15 +43,18 @@ fancyclassname=$(echo "$classname" | sed 's/_/\ /g' | tr '[:lower:]' '[:upper:]'
 fileclassname=$(echo "$classname" | sed 's/_//g')
 
 if echo "$hwdir" | rg -q "$isWardclass"; then
-    hwfile="$fileclassname.$semester.$hwname.nww612.tex"
+    # hwfile="$fileclassname.$semester.$hwname.nww612.tex"
+    hwfile="$fileclassname.$semester.$hwname.nww612.typ"
     font="Consolas"
 else
-    hwfile="peltier_${fileclassname}_${semester}_$hwname.tex"
+    # hwfile="peltier_${fileclassname}_${semester}_$hwname.tex"
+    hwfile="peltier_${fileclassname}_${semester}_$hwname.typ"
     font="Noto Sans"
 fi
 
 # cp in hw tmpl
-cp $HOME/school/hw_tmpl.tex $hwdir/$hwname/report/$hwfile
+# cp $HOME/school/hw_tmpl.tex $hwdir/$hwname/report/$hwfile # latex
+cp $HOME/school/hw_tmpl.typ $hwdir/$hwname/report/$hwfile # typst
 cd $hwdir/$hwname/report
 
 # replace PLACEHOLDERS ( top -> down )
