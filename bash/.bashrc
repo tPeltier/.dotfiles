@@ -122,6 +122,7 @@ alias ltt='eza --tree --level=4'
 # alias la='ls -A'
 # alias l='eza --git-ignore'
 # alias l='ls -CF'
+
 # FZF aliases
 #alias cfzf='code $(fzf)'
 alias nfzf='nvim -c "lua require(\"telescope.builtin\").find_files()"'
@@ -174,13 +175,13 @@ alias dockerstart="sudo systemctl start docker"
 alias dockerstop="sudo systemctl stop docker"
 
 # tmux aliases
+alias t='tmux'
 #alias tmuxls='tmux list-sessions'
 alias tl='tmux list-sessions'
 #alias tmuxks='tmux kill-server'
 alias tks='tmux kill-server'
 alias td='tmux detach'
 alias ta='tmux attach'
-
 
 # update
 alias upall='sudo dnf upgrade -y && sudo flatpak upgrade -y'
