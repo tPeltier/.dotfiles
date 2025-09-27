@@ -160,8 +160,8 @@ vim.opt.spell = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
 
--- Set text width to 100
-vim.opt.textwidth = 100
+-- Set text width to 90
+vim.opt.textwidth = 90
 
 -- Disable raw tabs
 vim.opt.tabstop = 4
