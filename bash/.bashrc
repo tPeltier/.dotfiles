@@ -108,6 +108,7 @@ alias cp='cp -i'
 alias cpy='cp'
 # open
 alias ii='xdg-open'
+alias y='yazi'
 
 # some more ls aliases (ls -> exa)
 alias ls='eza --oneline --sort=type --sort=extension'
