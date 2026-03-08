@@ -238,6 +238,11 @@ alias untar='tar -zxvf '
 alias vdir='vdir --color=auto'
 alias wget='wget -c '
 
+alias venvinit='python -m venv .venv'
+alias venvsource='source .venv/bin/activate'
+alias venvfreeze='pip freeze > requirements.txt'
+alias venvinstall='pip install -r requirements.txt'
+
 # pacman / arch
 alias update='sudo pacman -Syu'
 alias rmpkg="sudo pacman -Rsn"
