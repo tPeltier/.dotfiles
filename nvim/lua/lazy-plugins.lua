@@ -28,6 +28,7 @@ require("lazy").setup({
 	require("plugins.base.gitsigns"),
 	require("plugins.base.harpoon"),
 	require("plugins.base.indent_line"),
+	require("plugins.base.flash"),
 	require("plugins.base.lint"),
 	require("plugins.base.lspconfig"),
 	require("plugins.base.mini"),
