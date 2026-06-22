@@ -32,6 +32,7 @@ require("lazy").setup({
 	require("plugins.base.indent_line"),
 	require("plugins.base.lint"),
 	require("plugins.base.lspconfig"),
+	require("plugins.base.md-prev"),
 	require("plugins.base.mini"),
 	require("plugins.base.obsidian"),
 	require("plugins.base.sonokai"),
