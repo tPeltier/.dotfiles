@@ -17,11 +17,16 @@ set $term kitty
 set $menu wmenu-run -N 222327 -n fc5d7c -S 181819 -s ff6077 -f "Hurmit Nerd Font Regular 10"
 
 ### Output configuration
-#
+
 # wallpaper
-output * bg $HOME/Pictures/wallpapers/workstation/skull_flower_pink-hd.png fill
+output * bg $HOME/Pictures/skull_flower_pink-hd.png fill
+#output * bg #202020 solid_color
+
 # zowie
 output HDMI-A-1 resolution 1920x1080@239.760Hz
+output eDP-1 resolution 1920x1200@60.001Hz
+output Virtual-1 resolution 1920x1080@60.00Hz
+output Virtual-1 resolution 1920x1200@60.00Hz
 
 ### Idle configuration
 #
@@ -37,19 +42,22 @@ output HDMI-A-1 resolution 1920x1080@239.760Hz
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
-#
-# Example configuration:
-#
-#   input type:touchpad {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-#   input type:keyboard {
-#       xkb_layout "eu"
-#   }
+
+# input type:touchpad {
+#   dwt enabled
+#   tap enabled
+#   natural_scroll enabled
+#   middle_emulation enabled
+# }
+
+# bind caps to escape on ALL keyboards (NOTE: might want to refine)
+input * {
+  xkb_options caps:escape
+}
+
+  # input type:keyboard {
+  #     xkb_layout "eu"
+  # }
 #
 # You can also configure each device individually.
 # Read `man 5 sway-input` for more information about this section.
