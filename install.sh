@@ -76,6 +76,10 @@ link_file "$DOTFILES/kitty" "$XDG_CONFIG_HOME/kitty"
 info "Setting up btop..."
 link_file "$DOTFILES/btop" "$XDG_CONFIG_HOME/btop"
 
+# btop
+info "Setting up yazi..."
+link_file "$DOTFILES/yazi" "$XDG_CONFIG_HOME/yazi"
+
 # fastfetch
 info "Setting up fastfetch..."
 link_file "$DOTFILES/fastfetch" "$XDG_CONFIG_HOME/fastfetch"
