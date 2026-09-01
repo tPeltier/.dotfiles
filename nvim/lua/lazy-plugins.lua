@@ -34,7 +34,6 @@ require("lazy").setup({
 	require("plugins.base.lspconfig"),
 	require("plugins.base.md-prev"),
 	require("plugins.base.mini"),
-	require("plugins.base.obsidian"),
 	require("plugins.base.presenting"),
 	require("plugins.base.sonokai"),
 	require("plugins.base.telescope"),
