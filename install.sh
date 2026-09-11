@@ -92,6 +92,10 @@ link_file "$DOTFILES/zathura" "$XDG_CONFIG_HOME/zathura"
 info "Setting up .bashrc..."
 link_file "$DOTFILES/.bashrc" "$HOME/.bashrc"
 
+# .bash_aliases lives at $HOME, not $XDG_CONFIG_HOME
+info "Setting up .bash_aliases..."
+link_file "$DOTFILES/.bash_aliases" "$HOME/.bash_aliases"
+
 ###############################################################################
 # Done
 ###############################################################################
