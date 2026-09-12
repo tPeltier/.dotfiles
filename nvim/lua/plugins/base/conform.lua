@@ -26,6 +26,7 @@ return {
 		formatters_by_ft = {
 			-- TODO: ADD FORMATTERS
 			lua = { "stylua" },
+			nix = { "nixfmt" },
 			-- Conform can also run multiple formatters sequentially
 			-- python = { "isort", "black" },
 			--

@@ -162,6 +162,7 @@ return {
 			yamlls = {},
 			tinymist = {},
 			texlab = {},
+			nil_ls = {},
 			-- rust_analyzer = {},
 			-- asm_lsp = {},
 			-- phpactor = {},
@@ -205,6 +206,8 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
+			"nixfmt",
+			"statix",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
