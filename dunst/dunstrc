@@ -1,0 +1,15 @@
+[global]
+    origin = top-right
+    offset = 10x10
+    font = JetBrainsMono Nerd Font 10
+    format = "<b>%s</b>\n%b"
+    timeout = 5
+
+[urgency_low]
+    timeout = 3
+
+[urgency_normal]
+    timeout = 5
+
+[urgency_critical]
+    timeout = 0
