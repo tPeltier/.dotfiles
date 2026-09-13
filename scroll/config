@@ -65,6 +65,12 @@ input * {
 # You can also configure each device individually.
 # Read `man 5 scroll-input` for more information about this section.
 
+animations {
+  enabled no
+   # workspace_switch no
+   #  overview no
+   #  window_move no
+}
 ### Layout settings
 #
 layout_default_width 1.0
