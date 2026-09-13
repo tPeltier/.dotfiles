@@ -2,7 +2,7 @@
 icons = "none"
 
 [theme]
-theme = "plain"
+theme = "native"
 
 # Needs a notification daemon running
 [[block]]
