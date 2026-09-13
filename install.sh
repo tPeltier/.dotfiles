@@ -64,6 +64,10 @@ link_file "$DOTFILES/tmux" "$XDG_CONFIG_HOME/tmux"
 info "Setting up sway..."
 link_file "$DOTFILES/sway" "$XDG_CONFIG_HOME/sway"
 
+# scroll
+info "Setting up scroll..."
+link_file "$DOTFILES/scroll" "$XDG_CONFIG_HOME/scroll"
+
 # i3status
 info "Setting up i3status..."
 link_file "$DOTFILES/i3status" "$XDG_CONFIG_HOME/i3status"

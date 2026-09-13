@@ -1,0 +1,293 @@
+# [ MODIFIED ] scroll config, ported from my sway config
+# Read `man 5 scroll` for a complete reference.
+# scroll only has one layout (a PaperWM-like scrolling layout), so sway's
+# splith/splitv/tabbed/stacking layout commands don't exist here. See the
+# "Layout stuff" section below for how that's handled instead.
+
+# Font
+font pango: JetBrainsMono Nerd Font
+
+### Variables
+#
+# Logo key (Mod4). Use Mod1 for Alt.
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term kitty
+#                   normal_bg normal_fg selection_bg selection_fg font
+set $menu wmenu-run -N 222327 -n fc5d7c -S 181819 -s ff6077 -f "JetBrainsMono Nerd Font"
+
+### Output configuration
+
+# wallpaper
+# output * bg $HOME/Pictures/skull_flower_pink-hd.png fill
+output * bg #202020 solid_color
+
+# zowie
+output HDMI-A-1 resolution 1920x1080@239.760Hz
+output eDP-1 resolution 1920x1200@60.001Hz
+# output Virtual-1 resolution 1920x1080@60.00Hz
+output Virtual-1 resolution 1920x1200@60.00Hz
+
+### Idle configuration
+#
+# Example configuration:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'scrollmsg "output * power off"' resume 'scrollmsg "output * power on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+### Input configuration
+
+# input type:touchpad {
+#   dwt enabled
+#   tap enabled
+#   natural_scroll enabled
+#   middle_emulation enabled
+# }
+
+# bind caps to escape on ALL keyboards (NOTE: might want to refine)
+input * {
+  xkb_options caps:escape
+}
+
+  # input type:keyboard {
+  #     xkb_layout "eu"
+  # }
+#
+# You can also configure each device individually.
+# Read `man 5 scroll-input` for more information about this section.
+
+### Layout settings
+#
+# Default fraction of the output a new column/window takes. See
+# `layout_widths`/`layout_heights` for the values `cycle_size` steps through.
+layout_default_width 0.5
+layout_default_height 1.0
+layout_widths [0.33333333 0.5 0.666666667 1.0]
+layout_heights [0.33333333 0.5 0.666666667 1.0]
+
+### Key bindings
+#
+# Basics:
+#
+    # Start a terminal
+    bindsym $mod+Return exec $term
+
+    # Kill focused window
+    bindsym $mod+Shift+q kill
+
+    # Start your launcher
+    bindsym $mod+d exec $menu
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+
+    # Reload the configuration file
+    bindsym $mod+Shift+c reload
+
+    # Exit scroll (logs you out of your Wayland session)
+    bindsym $mod+Shift+e exec scrollnag -t warning -m 'You pressed the exit shortcut. Do you really want to exit scroll? This will end your Wayland session.' -B 'Yes, exit scroll' 'scrollmsg exit'
+#
+# Moving around:
+#
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # Or use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+    # Ditto, with arrow keys
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+#
+# Workspaces:
+#
+    # Switch to workspace
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+    # Move focused container to workspace
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
+    # Note: workspaces can have any name you want, not just numbers.
+    # We just use 1-10 as the default.
+
+    # Move to the prev/next workspace
+    bindsym $mod+Ctrl+$right workspace next
+    bindsym $mod+Ctrl+$left workspace prev
+    bindsym $mod+Ctrl+Right workspace next
+    bindsym $mod+Ctrl+Left workspace prev
+
+#
+# Layout stuff:
+#
+    # scroll has one scrolling layout instead of sway's splith/splitv/
+    # tabbed/stacking. set_mode h/v picks the orientation new windows use
+    # (was $mod+b splith / $mod+v splitv).
+    bindsym $mod+b set_mode h
+    bindsym $mod+v set_mode v
+
+    # No equivalent to "layout stacking" / "layout tabbed" — scroll doesn't
+    # have those container layouts, so $mod+s and $mod+w are unbound here.
+
+    # Toggle the current container's orientation (h<->v). Closest analogue
+    # to sway's "layout toggle split" (was $mod+e).
+    bindsym $mod+e layout_transpose
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # Move focus to the parent container
+    bindsym $mod+a focus parent
+#
+# Scratchpad:
+#
+    # scroll keeps sway's scratchpad, a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+minus scratchpad show
+#
+# Resizing containers:
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+#
+# Scroll extras (new in scroll, no sway equivalent):
+#
+    # Zoomed-out overview of the whole scrolling workspace
+    bindsym --no-repeat $mod+Tab scale_workspace overview
+
+    # Scale the content of the focused window/column independent of the
+    # output's own scale
+    bindsym $mod+comma scale_content incr -0.05
+    bindsym $mod+period scale_content incr 0.05
+    bindsym $mod+Ctrl+period scale_content reset
+#
+# Utilities:
+#
+    # Special keys to adjust volume via PulseAudio
+    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+    # Special keys to adjust brightness via brightnessctl
+    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+    # Special key to take a screenshot with grim
+    bindsym Print exec grim
+
+# theming
+# layout
+default_border pixel 2
+default_floating_border pixel 2
+smart_borders on
+smart_gaps on
+gaps inner 6
+
+# sonokai default colors
+set {
+    $bg_red     #55393d
+    $red        #fc5d7c
+    $filled_red #ff6077
+    $bg_dim     #222327
+    $bg0        #2c2e34
+    $black      #181819
+}
+
+# class                 border      bg          text   indicator   child_border
+client.focused          $red        $red        $black $red        $red
+client.focused_inactive $bg0        $bg0        $red   $bg0        $bg0
+client.unfocused        $bg0        $bg0        $red   $bg0        $bg0
+client.urgent           $filled_red $filled_red $black $filled_red $filled_red
+
+#
+# Status Bar:
+#
+# Read `man 5 scroll-bar` for more information about this section.
+bar {
+    position top
+
+    # When the status_command prints a new line to stdout, scrollbar updates.
+    # The default just shows the current date and time.
+    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command i3status
+
+    colors {
+        statusline $red
+        background $bg_dim
+        inactive_workspace $black $black $red
+        focused_workspace $red $red $black
+        scroller $red $bg_dim $red
+    }
+}
+
+include /etc/scroll/config.d/*
