@@ -2,7 +2,7 @@
 # Read `man 5 sway` for a complete reference.
 
 # Font
-font pango: JetBrainsMono Nerd Font
+font pango: JetBrainsMono Nerd Font 12
 
 ### Variables
 #

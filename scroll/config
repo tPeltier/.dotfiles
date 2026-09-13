@@ -5,7 +5,7 @@
 # "Layout stuff" section below for how that's handled instead.
 
 # Font
-font pango: JetBrainsMono Nerd Font
+font pango: JetBrainsMono Nerd Font 12
 
 ### Variables
 #
