@@ -19,7 +19,7 @@ set $menu wmenu-run -N 222327 -n fc5d7c -S 181819 -s ff6077 -f "Hurmit Nerd Font
 ### Output configuration
 
 # wallpaper
-output * bg $HOME/Pictures/skull_flower_pink-hd.png fill
+# output * bg $HOME/Pictures/skull_flower_pink-hd.png fill
 output * bg #202020 solid_color
 
 # zowie
