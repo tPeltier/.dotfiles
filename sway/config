@@ -32,6 +32,8 @@ output Virtual-1 resolution 1920x1200@60.00Hz
 #
 # Example configuration:
 #
+exec dunst
+exec wl-gammarelay-rs
 exec swayidle -w \
          timeout 300 'swaylock -f' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
@@ -254,7 +256,7 @@ bar {
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-    status_command i3status
+    status_command i3status-rs
 
     colors {
         statusline $red
