@@ -72,7 +72,7 @@ format = " $icon $percentage {$time_remaining |}"
 
 [[block]]
 block = "time"
-format = " $icon $timestamp.datetime(f:'%Y-%m-%d %H:%M:%S') "
+format = " $timestamp.datetime(f:'%Y-%m-%d %H:%M:%S') "
 
 # [[block]]
 # block = "taskwarrior"
