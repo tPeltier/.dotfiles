@@ -1,0 +1,10 @@
+color=55393d
+ring-color=fc5d7c
+ring-ver-color=ff6077
+inside-color=55393d
+inside-ver-color=55393d
+line-uses-ring
+text-color=fc5d7c
+text-ver-color=ff6077
+key-hl-color=ff6077
+show-failed-attempts

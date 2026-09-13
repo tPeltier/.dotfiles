@@ -68,6 +68,10 @@ link_file "$DOTFILES/sway" "$XDG_CONFIG_HOME/sway"
 info "Setting up scroll..."
 link_file "$DOTFILES/scroll" "$XDG_CONFIG_HOME/scroll"
 
+# sway
+info "Setting up swaylock..."
+link_file "$DOTFILES/swaylock" "$XDG_CONFIG_HOME/swaylock"
+
 # i3status
 info "Setting up i3status..."
 link_file "$DOTFILES/i3status" "$XDG_CONFIG_HOME/i3status"
