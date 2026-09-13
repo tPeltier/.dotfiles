@@ -1,10 +1,29 @@
-color=55393d
-ring-color=fc5d7c
-ring-ver-color=ff6077
-inside-color=55393d
-inside-ver-color=55393d
+# Screen background (behind the lock indicator)
+color=202020
+
+# --- Ring ---
+ring-color=202020
+ring-ver-color=fc5d7c
+ring-wrong-color=e05f65
+ring-clear-color=8fae68
+
+# --- Inside of circle ---
+inside-color=202020
+inside-ver-color=202020
+inside-wrong-color=202020
+inside-clear-color=202020
+
+# Make the progress line follow the ring color instead of inside
 line-uses-ring
+
+# --- Text ---
 text-color=fc5d7c
-text-ver-color=ff6077
-key-hl-color=ff6077
+text-ver-color=fc5d7c
+text-wrong-color=e05f65
+text-clear-color=8fae68
+
+# --- Keypress feedback ---
+key-hl-color=fc5d7c
+bs-hl-color=e05f65
+
 show-failed-attempts
