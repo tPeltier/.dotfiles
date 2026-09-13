@@ -2,7 +2,7 @@
 # Read `man 5 sway` for a complete reference.
 
 # Font
-font pango: Hurmit Nerd Font Regular 10
+font pango: JetBrainsMono Nerd Font
 
 ### Variables
 #
