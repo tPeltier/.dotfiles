@@ -33,7 +33,6 @@ output Virtual-1 resolution 1920x1200@60.00Hz
 # Example configuration:
 #
 exec dunst
-exec wl-gammarelay-rs
 exec swayidle -w \
          timeout 300 'swaylock -f' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
