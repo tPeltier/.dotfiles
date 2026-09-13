@@ -4,27 +4,15 @@ icons = "none"
 [theme]
 theme = "plain"
 
+# Needs a notification daemon running
 [[block]]
-block = "net"
-device = "^wl"
-missing_format = ""
-format = " $icon $ssid ($signal_strength%) $ip "
+block = "notify"
+driver = "dunst"
+format = " $icon {($notification_count.eng(w:1)) |}"
 
 [[block]]
-block = "net"
-device = "^en"
-missing_format = ""
-format = " $icon $ip ($speed_down.eng(prefix:K)) "
-
-[[block]]
-block = "battery"
-format = " $icon $percentage {$time_remaining |}"
-
-[[block]]
-block = "disk_space"
-path = "/"
-info_type = "available"
-format = " $icon $available "
+block = "music"
+format = " $icon {$combo.str(max_w:25) $play $prev $next |}"
 
 [[block]]
 block = "load"
@@ -33,25 +21,6 @@ format = " $icon $1m "
 [[block]]
 block = "memory"
 format = " $icon $mem_used_percents "
-
-[[block]]
-block = "time"
-format = " $icon $timestamp.datetime(f:'%Y-%m-%d %H:%M:%S') "
-
-[[block]]
-block = "hueshift"
-hue_shifter = "wl-gammarelay-rs"
-format = " $icon $temperature "
-
-[[block]]
-block = "music"
-format = " $icon {$combo.str(max_w:25) $play $prev $next |}"
-
-# Needs a notification daemon running
-[[block]]
-block = "notify"
-driver = "dunst"
-format = " $icon {($notification_count.eng(w:1)) |}"
 
 [[block]]
 block = "pomodoro"
@@ -77,6 +46,33 @@ name = "pipewire"
 block = "sound"
 driver = "auto"
 format = " $icon {$volume.eng(w:2) |}"
+
+[[block]]
+block = "hueshift"
+hue_shifter = "wl-gammarelay-rs"
+format = " $icon $temperature "
+
+[[block]]
+block = "net"
+device = "^wl"
+missing_format = ""
+# format = " $icon $ssid ($signal_strength%) $ip "
+format = " $icon ($signal_strength%) $ip "
+
+[[block]]
+block = "net"
+device = "^en"
+missing_format = ""
+# format = " $icon $ip ($speed_down.eng(prefix:K)) "
+format = " $icon ($speed_down.eng(prefix:K)) "
+
+[[block]]
+block = "battery"
+format = " $icon $percentage {$time_remaining |}"
+
+[[block]]
+block = "time"
+format = " $icon $timestamp.datetime(f:'%Y-%m-%d %H:%M:%S') "
 
 # [[block]]
 # block = "taskwarrior"
