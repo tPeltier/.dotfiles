@@ -19,8 +19,8 @@ line-uses-ring
 # --- Text ---
 text-color=fc5d7c
 text-ver-color=fc5d7c
-text-wrong-color=e05f65
-text-clear-color=8fae68
+text-wrong-color=ff6077
+text-clear-color=9ed072
 
 # --- Keypress feedback ---
 key-hl-color=fc5d7c
