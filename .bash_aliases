@@ -29,6 +29,9 @@ alias cpy='cp'
 alias ii='xdg-open'
 alias y='yazi'
 
+# edit privileged files w sudoedit
+alias svim='sudo -e'
+
 # some more ls aliases (ls -> exa)
 alias ls='eza --oneline --sort=type --sort=extension'
 alias lsa='eza --long --header --icons --git'

@@ -9,6 +9,7 @@ esac
 
 export DOTFILES="$HOME/.dotfiles"
 export EDITOR=nvim
+export SUDO_EDITOR=nvim
 
 set -o vi
 bind -m vi-command 'Control-g: clear-screen'

@@ -21,8 +21,13 @@ vim.opt.clipboard = "unnamedplus"
 -- Enable break indent
 vim.opt.breakindent = true
 
--- Save undo history
-vim.opt.undofile = true
+vim.opt.undofile = false
+
+-- dont write priv to disk
+if vim.env.SUDO_USER then
+	vim.opt.shada = ""
+	vim.opt.swapfile = false
+end
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
