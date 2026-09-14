@@ -80,6 +80,10 @@ link_file "$DOTFILES/i3status" "$XDG_CONFIG_HOME/i3status"
 info "Setting up kitty..."
 link_file "$DOTFILES/kitty" "$XDG_CONFIG_HOME/kitty"
 
+# foot
+info "Setting up foot..."
+link_file "$DOTFILES/foot" "$XDG_CONFIG_HOME/foot"
+
 # btop
 info "Setting up btop..."
 link_file "$DOTFILES/btop" "$XDG_CONFIG_HOME/btop"
