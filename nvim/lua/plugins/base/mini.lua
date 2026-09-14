@@ -1,5 +1,6 @@
 return { -- Collection of various small independent plugins/modules
 	"echasnovski/mini.nvim",
+	event = "VeryLazy",
 	config = function()
 		-- Better Around/Inside textobjects
 		--
@@ -29,6 +30,17 @@ return { -- Collection of various small independent plugins/modules
 		---@diagnostic disable-next-line: duplicate-set-field
 		statusline.section_location = function()
 			return "%2l:%-2v"
+		end
+
+		-- When editing via `sudoedit`/`sudo -e`, sudo sets $SUDO_USER in the
+		-- editor's environment even though nvim itself runs as us, not root.
+		-- Recolor the statusline mode badge as a loud warning so it's obvious
+		-- this buffer is a privileged temp file that gets copied back on save.
+		if vim.env.SUDO_USER then
+			local sudo_hl = { bg = "#e33232", fg = "#000000", bold = true }
+			for _, mode in ipairs({ "Normal", "Insert", "Visual", "Replace", "Command", "Other" }) do
+				vim.api.nvim_set_hl(0, "MiniStatuslineMode" .. mode, sudo_hl)
+			end
 		end
 
 		-- ... and there is more!

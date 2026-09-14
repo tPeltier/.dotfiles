@@ -1,5 +1,9 @@
 return {
 	"folke/zen-mode.nvim",
+	cmd = "ZenMode",
+	keys = {
+		{ "<leader>z", "<cmd>ZenMode<CR>", desc = "Toggle ZenMode" },
+	},
 	opts = {
 		window = {
 			backdrop = 0.80, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal

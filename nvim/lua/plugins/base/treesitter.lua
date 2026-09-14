@@ -1,12 +1,12 @@
 return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	lazy = false,
+	event = { "BufReadPre", "BufNewFile" },
 	main = "nvim-treesitter.config", -- Sets main module to use for opts
 	opts = {
 		ensure_installed = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "python", "go", "vim", "vimdoc" },
 		-- Autoinstall languages that are not installed
-		auto_install = true,
+		auto_install = false,
 		highlight = {
 			enable = true,
 			-- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
