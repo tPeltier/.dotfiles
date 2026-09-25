@@ -46,6 +46,11 @@ fi
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 
+fe() {
+  local file
+  file=$(fzf --preview 'bat --color=always --line-range :100 {}' 2>/dev/null) && nvim "$file"
+}
+
 ######################################################
 
 export PATH=$PATH:/usr/local/go/bin
