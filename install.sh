@@ -84,6 +84,10 @@ link_file "$DOTFILES/kitty" "$XDG_CONFIG_HOME/kitty"
 info "Setting up foot..."
 link_file "$DOTFILES/foot" "$XDG_CONFIG_HOME/foot"
 
+# alacritty
+info "Setting up alacritty..."
+link_file "$DOTFILES/alacritty" "$XDG_CONFIG_HOME/alacritty"
+
 # btop
 info "Setting up btop..."
 link_file "$DOTFILES/btop" "$XDG_CONFIG_HOME/btop"
