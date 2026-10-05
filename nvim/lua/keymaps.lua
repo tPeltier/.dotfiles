@@ -1,6 +1,9 @@
 -- [[ My keymaps ]]
 vim.keymap.set("n", "<leader>sc", "z=", { desc = "[S]pell [C]heck" })
 vim.keymap.set("n", "<leader>a", "@q", { desc = "[A]t q; execute q macro" })
+vim.keymap.set("n", "<leader>n", function()
+	vim.wo.relativenumber = not vim.wo.relativenumber
+end, { desc = "Toggle relative/absolute [N]umbers" })
 
 -- lua runners
 vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Run whole Lua file" })
