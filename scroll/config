@@ -15,7 +15,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term kitty
+set $term foot
 #                   normal_bg normal_fg selection_bg selection_fg font
 set $menu wmenu-run -N 222327 -n fc5d7c -S 181819 -s ff6077 -f "JetBrainsMono Nerd Font"
 
