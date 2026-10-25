@@ -37,6 +37,18 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+git_comp="$(dirname "$(readlink -f "$(command -v git)")")/../share/bash-completion/completions/git"
+[[ -r $git_comp ]] && source "$git_comp"
+
+# get completion for aliases
+for al in $(compgen -a); do
+  read -r cmd sub _ <<<"${BASH_ALIASES[$al]}"
+  [[ $cmd == git ]] || continue
+  fn="_git_${sub//-/_}"                 # cherry-pick -> _git_cherry_pick
+  declare -F "$fn" >/dev/null && __git_complete "$al" "$fn"
+done
+__git_complete gcam _git_commit
+
 # add to PATH only if missing, so nested shells don't keep growing it
 path_prepend() { [[ -d $1 && ":$PATH:" != *":$1:"* ]] && PATH="$1:$PATH"; }
 path_append()  { [[ -d $1 && ":$PATH:" != *":$1:"* ]] && PATH="$PATH:$1"; }
