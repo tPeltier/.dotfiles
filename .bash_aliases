@@ -108,8 +108,8 @@ alias td='tmux detach'
 alias ta='tmux attach'
 
 # update
-alias upall='sudo dnf upgrade -y && sudo flatpak upgrade -y'
-alias upnvim='nvim -c "Lazy update" && nvim -c "MasonUpdate"'
+alias up-dnf-fp='sudo dnf upgrade -y && sudo flatpak upgrade -y'
+alias up-nvim='nvim -c "Lazy update" && nvim -c "MasonUpdate"'
 
 # buku
 alias b='buku --suggest'
@@ -119,9 +119,7 @@ alias fpbu='firefox --private-window $(buku -p -f 10 | fzf)'
 # ollama
 alias ollamastart='docker start ollama'
 alias ollamastop='docker stop ollama'
-alias ai='docker exec -it ollama ollama run gemma2:27b'
-alias lite='docker exec -it ollama ollama run llama3.1'
-alias tiny='docker exec -it ollama ollama run phi4'
+alias ai='docker exec -it ollama ollama run'
 
 # firefox nightly ( testing; known bad solution )
 alias devbrowser='$HOME/.local/opt/firefox-devel/firefox/firefox'
