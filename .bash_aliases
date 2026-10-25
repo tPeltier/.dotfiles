@@ -70,6 +70,7 @@ alias gf="git fetch"
 alias gfa="git fetch --all"
 alias gl='git log --graph --pretty="format:%C(yellow)%h%C(auto)%d%Creset %s %C(white) %C(cyan)%an, %C(magenta)%ar%Creset"'
 alias gla='git log --all'
+alias glo='git log --oneline'
 alias gm="git merge --no-ff"
 alias gmf="git merge --ff-only"
 alias gp="git push"
