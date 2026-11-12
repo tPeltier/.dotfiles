@@ -76,11 +76,6 @@ cached_init() {
 cached_init zoxide zoxide init bash
 cached_init starship starship init bash --print-full-init
 
-fe() {
-  local file
-  file=$(fzf --preview 'bat --color=always --line-range :100 {}' 2>/dev/null) && nvim "$file"
-}
-
 ######################################################
 
 #   Autocompletion for kubectl
